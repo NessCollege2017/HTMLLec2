@@ -1,0 +1,87 @@
+/* Css:  */
+
+/*Element Selectors  */
+
+/* the h1 inside the header */
+
+
+/*The class selector:  */
+.text-center{
+    text-align: center;
+}
+
+.text-start{
+    text-align: start;
+}
+
+.text-end{
+    text-align: end;
+}
+
+.green{
+    background: green;
+    color: white;
+    font-weight: bold;
+}
+
+.white-box{
+    background: white;
+    color: green;
+}
+
+
+/*selector combos  */
+/*article with a class of text.center  */
+article.text-center{
+
+}
+
+/*Selector combo:  */
+/*Only elements that have both classes:  */
+.text-center.white-box{
+
+}
+/*specificity:
+Element:1
+Class:10
+Id:100
+
+h1.red   specifity = 1 + 10 = 11
+*/
+
+
+/*in case we have the exact same specifity  */
+/*the last one "Wins"  */
+
+
+
+
+
+/* spans wrap to content (and ignore width) */
+/* divs take the entire line, (They do take width)*/
+.box{
+    width: 150px;
+    height: 150px;
+    vertical-align: text-top;
+    color: white;
+    display: inline-block; 
+    /*display inline-block: respects width, height. inlines the elements:  */
+}
+
+.red{
+    background: red;
+}
+
+.green{
+    background: green;
+}
+
+.blue{
+    background: blue;
+}
+
+aside{
+    width: 20%;
+    display: inline-block;
+}
+
