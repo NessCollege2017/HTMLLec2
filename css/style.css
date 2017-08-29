@@ -1,46 +1,54 @@
 /* Css:  */
 
+
 /*Element Selectors  */
+
 
 /* the h1 inside the header */
 
 
 /*The class selector:  */
-.text-center{
+
+.text-center {
     text-align: center;
 }
 
-.text-start{
+.text-start {
     text-align: start;
 }
 
-.text-end{
+.text-end {
     text-align: end;
 }
 
-.green{
+.green {
     background: green;
     color: white;
     font-weight: bold;
 }
 
-.white-box{
+.white-box {
     background: white;
     color: green;
 }
 
 
 /*selector combos  */
-/*article with a class of text.center  */
-article.text-center{
 
-}
+
+/*article with a class of text.center  */
+
+article.text-center {}
+
 
 /*Selector combo:  */
-/*Only elements that have both classes:  */
-.text-center.white-box{
 
-}
+
+/*Only elements that have both classes:  */
+
+.text-center.white-box {}
+
+
 /*specificity:
 Element:1
 Class:10
@@ -51,37 +59,119 @@ h1.red   specifity = 1 + 10 = 11
 
 
 /*in case we have the exact same specifity  */
+
+
 /*the last one "Wins"  */
 
 
-
-
-
 /* spans wrap to content (and ignore width) */
+
+
 /* divs take the entire line, (They do take width)*/
-.box{
+
+.box {
+    position: relative;
     width: 150px;
     height: 150px;
     vertical-align: text-top;
     color: white;
-    display: inline-block; 
+    display: inline-block;
     /*display inline-block: respects width, height. inlines the elements:  */
 }
 
-.red{
+.red {
+    position: relative;
     background: red;
+    z-index: 15;
 }
 
-.green{
+.green {
     background: green;
+    z-index: 2;
 }
 
-.blue{
+.blue {
     background: blue;
+    z-index: 2;
 }
 
-aside{
+.movit {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+}
+
+aside {
     width: 20%;
     display: inline-block;
 }
 
+
+/*absolute position based on the viewport  */
+
+#face {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+#site-header {
+    position: fixed;
+    top: 0px;
+    width: 80%;
+    left: 10%;
+    background: black;
+    color: white;
+}
+
+#parent {
+    background: #eee;
+    height: 200px;
+    width: 400px;
+    position: relative;
+}
+
+.center {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+}
+
+
+.btn{
+    display: inline-block;
+    vertical-align: text-top;
+    border-radius: 4px;
+    box-shadow: 0 5px 2px black;
+    margin: 0px;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s;
+}
+
+.btn:hover{
+    box-shadow: 0 20px 3px black;
+     
+}
+
+.btn-default{
+    background: #0099cc;
+}
+
+.btn-danger{
+    background: #dd3333;
+}
+
+.btn-green{
+    background: green;
+}
